@@ -1,22 +1,13 @@
 ###################
-Tugas Akhir Web Programming II
+Tugas Akhir Web Programming
 ###################
 
-Penulis ingin memanfaatkan perkembangan teknologi dengan membuat sebuah website untuk membantu klinik yang berada di masyarakat
-kecil hingga menengah. Dengan adanya beberapa fitur yang mempermudah proses administrasi dan pendataan membuat pekerjaan lebih 
-efektif karena semuanya dilakukan hanya di depan suatu komputer. Dibandingkan dengan cara yang masih manual dengan pendaftaran 
-pasien hingga proses pembayaran masih menggunakan dokumen kertas yang tidak sangat efisien dan banyak membuang waktu. Apalagi 
-penyimpanan data jika menggunakan kertas atau dokumen dapat menyebabkan penumpukan dokumen dan bisa saja hilang atau rusak.
+pendahuluan sedang dipikirkan
 
 *******************
 Anggota Kelompok
 *******************
-
-- Dehan Perdana Sovyan
-- Faisal Zaki Prabowo
-- Hafif Faadillah
-- Mohammad Aryo Senoaji
-- Yohannes Halim Tanuwijaya
+blm di tulis
 
 **************************
 Cara Instalasi Aplikasi
