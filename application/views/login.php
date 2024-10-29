@@ -57,7 +57,7 @@
 						</div>
 					</div>
 					<div class="footer">
-						Copyright &copy; 2017 &mdash; Your Company 
+						Copyright &copy; 2024 &mdash; Kelompok C
 					</div>
 				</div>
 			</div>

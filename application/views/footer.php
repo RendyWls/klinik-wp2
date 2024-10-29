@@ -1,6 +1,6 @@
 <footer class="footer mt-auto py-3 ">
   <div class="container-fluid">
-    <span class="text-muted float-right">Copyright &copy; 2022 - Kelompok 1</span>
+    <span class="text-muted float-right">Copyright &copy; 2024 - Kelompok C</span>
   </div>
 </footer>
 
