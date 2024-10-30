@@ -35,9 +35,11 @@ class Dokter extends CI_Controller {
 
 	function insert(){
 		$nama = $this->input->post('nama_dokter');
+		$spesialisais = $this->input->post('spesialisasi');
 
 		$data = array(
-			'nama_dokter' => $nama
+			'nama_dokter' => $nama,
+			'spesialisasi' => $spesialisais
 		);
 
 		$this->Dokter_model->insert_data($data);
@@ -59,9 +61,11 @@ class Dokter extends CI_Controller {
 	function update(){
 		$id = $this->input->post('id_dokter');
 		$n = $this->input->post('nama_dokter');
+		$s = $this->input->post('spesialisasi');
 
 		$data = array(
-			'nama_dokter' => $n
+			'nama_dokter' => $n,
+			'spesialisasi' => $s
 		);
 
 		$where = array('id_dokter' => $id);

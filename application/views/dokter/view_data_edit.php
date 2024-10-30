@@ -12,6 +12,13 @@
                     <div class="form-group">
                         <label for="">Nama Dokter</label>
                         <input type="text" name="nama_dokter" id="nama_dokter" value="<?= $r['nama_dokter']; ?>" class="form-control" required>
+                        <br>
+                        <label for="">Spesialisasi</label>
+                        <select class="form-control" type="text" name="spesialisasi" id="spesialisasi">
+                            <option><?= $r['spesialisasi']; ?></option>
+                        <option>bedah</option>
+                        <option>Gigi</option>
+                        </select>
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-sm">Update Data</button>

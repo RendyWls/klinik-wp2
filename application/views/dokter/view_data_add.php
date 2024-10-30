@@ -11,6 +11,13 @@
                     <div class="form-group">
                         <label for="">Nama Dokter</label>
                         <input type="text" name="nama_dokter" id="nama_dokter" class="form-control" required>
+                        <br>
+                        <label for="">Spesialisasi</label>
+                        <select class="form-control" type="text" name="spesialisasi" id="spesialisasi">
+                        <option>bedah</option>
+                        <option>bedah 1</option>
+                        </select>
+                        <!-- <input type="text" name="spesialisasi" id="spesialisasi" class="form-control" required> -->
                     </div>
                     <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-sm">Simpan Data</button>
