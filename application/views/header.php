@@ -23,14 +23,21 @@
               Master Data
             </a>
             <div class="dropdown-menu" aria-labelledby="navMaster">
-              <a class="dropdown-item" href="<?= base_url('users'); ?>">Data User</a>
-              <a class="dropdown-item" href="<?= base_url('dokter'); ?>">Data Dokter</a>
-              <a class="dropdown-item" href="<?= base_url('pasien'); ?>">Data Pasien</a>
+              <a class="dropdown-item" href="<?= base_url('dokter'); ?>">Data Dokter</a>              
               <a class="dropdown-item" href="<?= base_url('obat'); ?>">Data Obat</a>
             </div>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('kunjungan') ?>">Kunjungan</a>
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navMaster" role="button" data-toggle="dropdown" aria-expanded="false">
+              Kunjungan
+            </a>
+          <div class="dropdown-menu" aria-labelledby="navMaster">
+              <a class="dropdown-item" href="<?= base_url('pasien'); ?>">Pasien</a>
+              <a class="dropdown-item" href="<?= base_url('kunjungan') ?>">Kunjungan Rawat Jalan</a>
+              <a class="dropdown-item" href="<?= base_url('kunjungan') ?>">Kunjungan Rawat Inap</a>
+              <a class="dropdown-item" href="<?= base_url('kunjungan') ?>">Kunjungan UGD/IGD</a>
+            </div>
+
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navLaporan" role="button" data-toggle="dropdown" aria-expanded="false">
@@ -39,7 +46,17 @@
             <div class="dropdown-menu" aria-labelledby="navLaporan">
               <a class="dropdown-item" href="<?= base_url('laporan/data_dokter'); ?>">Data Dokter</a>
               <a class="dropdown-item" href="<?= base_url('laporan/data_pasien'); ?>">Data Pasien</a>
-              <a class="dropdown-item" href="<?= base_url('laporan/data_kunjungan'); ?>">Data Kunjungan</a>
+              <a class="dropdown-item" href="<?= base_url('laporan/data_kunjungan'); ?>">Data Kunjungan Rawat Jalan</a>
+              <a class="dropdown-item" href="<?= base_url('laporan/data_kunjungan'); ?>">Data Kunjungan Rawat Inap</a>
+              <a class="dropdown-item" href="<?= base_url('laporan/data_kunjungan'); ?>">Data Kunjungan UGD/IGD</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navMaster" role="button" data-toggle="dropdown" aria-expanded="false">
+              Administrator
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navMaster">
+              <a class="dropdown-item" href="<?= base_url('users'); ?>">Data User</a>
             </div>
           </li>
           <li class="nav-item float-right">
