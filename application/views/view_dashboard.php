@@ -9,11 +9,14 @@
       <ul>
         <li>Andika Rendy Putra</li>
         <li>Herliana Aprilianti</li>
+        <li>Dzaki Aditya Pangestu</li>
+        <li>Mega Christina Marpaung</li>
         <li>Taufiqqurahman</li>
       </ul>
     </div>
   </div>
 
 </section>
+
 
     
