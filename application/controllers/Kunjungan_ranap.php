@@ -11,7 +11,7 @@ class Kunjungan extends CI_Controller {
 			redirect('auth');  # Ketika user belum login maka dikembalikan
 		}
 
-		$this->load->model('Kunjungan_model');
+		$this->load->model('Kunjungan_ranap_model');
 		$this->load->model('Pasien_model');
 		$this->load->model('Dokter_model');
 		$this->load->model('Obat_model');
@@ -19,12 +19,12 @@ class Kunjungan extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Kunjungan/Berobat';
+		$data['title'] = 'Kunjungan_ranap/Berobat';
 
-		$data['kunjungan'] = $this->Kunjungan_model->tampil_data()->result_array();
+		$data['kunjungan_ranap'] = $this->Kunjungan_ranap_model->tampil_data()->result_array();
 
 		$this->load->view('header', $data);
-		$this->load->view('kunjungan/view_data', $data);
+		$this->load->view('kunjungan_ranap/view_data', $data);
 		$this->load->view('footer');
 	}
 
@@ -35,7 +35,7 @@ class Kunjungan extends CI_Controller {
 		$data['dokter'] = $this->Dokter_model->tampil_data()->result_array();
 
 		$this->load->view('header', $data);
-		$this->load->view('kunjungan/view_data_add', $data);
+		$this->load->view('kunjungan_ranap/view_data_add', $data);
 		$this->load->view('footer');
 	}
 
@@ -52,7 +52,7 @@ class Kunjungan extends CI_Controller {
 
 		$this->Kunjungan_model->insert_data($data);
 
-		redirect('kunjungan');
+		redirect('kunjungan_ranap');
 	}
 
 	function edit($id){
@@ -65,7 +65,7 @@ class Kunjungan extends CI_Controller {
 		$data['edit'] = $this->Kunjungan_model->edit_data($where)->row_array();
 
 		$this->load->view('header', $data);
-		$this->load->view('kunjungan/view_data_edit', $data);
+		$this->load->view('kunjungan_ranap/view_data_edit', $data);
 		$this->load->view('footer');
 	}
 
@@ -84,14 +84,14 @@ class Kunjungan extends CI_Controller {
 		$where = array('id_berobat' => $id);
 		$this->Kunjungan_model->update_data($data, $where);
 
-		redirect('kunjungan');
+		redirect('kunjungan_ranap');
 	}
 
 	function hapus($id){
 		$where = array('id_berobat' => $id);
 		$this->Kunjungan_model->hapus_data($where);
 
-		redirect('kunjungan');
+		redirect('kunjungan_ranap');
 	}
 
 	// fungsi untuk rekam medis
@@ -116,7 +116,7 @@ class Kunjungan extends CI_Controller {
 
 
 		$this->load->view('header', $data);
-		$this->load->view('kunjungan/view_rekam_medis', $data);
+		$this->load->view('kunjungan_ranap/view_rekam_medis', $data);
 		$this->load->view('footer');
 	}
 
@@ -136,7 +136,7 @@ class Kunjungan extends CI_Controller {
 
 		$this->Kunjungan_model->update_data($data, $where);
 
-		redirect('kunjungan/rekam/'.$id_berobat);
+		redirect('kunjungan_ranap/rekam/'.$id_berobat);
 
 	}
 
