@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="author" content="Yohannes">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Login Klinik</title>
+	<title>Login Application</title>
 	<link rel="stylesheet" href="<?= base_url(); ?>assets/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="<?= base_url(); ?>assets/css/login.css">
 </head>

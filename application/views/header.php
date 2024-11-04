@@ -30,13 +30,13 @@
           </li>
           <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navMaster" role="button" data-toggle="dropdown" aria-expanded="false">
-              Kunjungan
+          Registrasi
             </a>
           <div class="dropdown-menu" aria-labelledby="navMaster">
               <a class="dropdown-item" href="<?= base_url('pasien'); ?>">Pasien</a>
-              <a class="dropdown-item" href="<?= base_url('kunjungan') ?>">Kunjungan Rawat Jalan</a>
-              <a class="dropdown-item" href="<?= base_url('kunjungan') ?>">Kunjungan Rawat Inap</a>
-              <a class="dropdown-item" href="<?= base_url('kunjungan') ?>">Kunjungan UGD/IGD</a>
+              <a class="dropdown-item" href="<?= base_url('kunjungan') ?>">Registrasi Rawat Jalan</a>
+              <a class="dropdown-item" href="<?= base_url('kunjungan_ranap') ?>">Registrasi Rawat Inap</a>
+              <a class="dropdown-item" href="<?= base_url('kunjungan_IGD') ?>">Registrasi IGD</a>
             </div>
 
           </li>
@@ -47,9 +47,9 @@
             <div class="dropdown-menu" aria-labelledby="navLaporan">
               <a class="dropdown-item" href="<?= base_url('laporan/data_dokter'); ?>">Data Dokter</a>
               <a class="dropdown-item" href="<?= base_url('laporan/data_pasien'); ?>">Data Pasien</a>
-              <a class="dropdown-item" href="<?= base_url('laporan/data_kunjungan'); ?>">Data Kunjungan Rawat Jalan</a>
-              <a class="dropdown-item" href="<?= base_url('laporan/data_kunjungan'); ?>">Data Kunjungan Rawat Inap</a>
-              <a class="dropdown-item" href="<?= base_url('laporan/data_kunjungan'); ?>">Data Kunjungan UGD/IGD</a>
+              <a class="dropdown-item" href="<?= base_url('laporan/data_kunjungan'); ?>">Data Registrasi Rawat Jalan</a>
+              <a class="dropdown-item" href="<?= base_url('laporan/data_kunjungan_ranap'); ?>">Data Registrasi Rawat Inap</a>
+              <a class="dropdown-item" href="<?= base_url('laporan/data_kunjungan_IGD'); ?>">Data Registrasi UGD/IGD</a>
             </div>
           </li>
           <li class="nav-item dropdown">
