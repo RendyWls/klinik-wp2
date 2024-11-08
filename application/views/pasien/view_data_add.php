@@ -15,8 +15,8 @@
                     <div class="form-group">
                         <label for="">Jenis Kelamin</label>
                         <select name="jenis_kelamin" id="jenis_kelamin" class="form-control" required>
-                            <option value="L">L</option>
-                            <option value="P">P</option>
+                            <option value="L">Laki - Laki</option>
+                            <option value="P">Perempuan</option>
                         </select>
                     </div>
                     <div class="form-group">
@@ -24,9 +24,20 @@
                         <input type="number" name="umur" id="umur" class="form-control" required>
                     </div>
                     <div class="form-group">
+                        <label for="">Alamat</label>
+                        <input type="text" name="alamat" id="alamat" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Nomor Telpon</label>
+                        <input type="text" name="nomor_telpon" id="nomor_telpon" class="form-control" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="email" name="email" id="email" class="form-control" required>
+                    </div>                                                            
+                    <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-sm">Simpan Data</button>
                     </div>
-            
                 </form>
             </div>
         </div>

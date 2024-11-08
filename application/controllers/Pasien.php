@@ -37,11 +37,17 @@ class Pasien extends CI_Controller {
 		$nama = $this->input->post('nama_pasien');
 		$jk = $this->input->post('jenis_kelamin');
 		$umur = $this->input->post('umur');
+		$alamat = $this->input->post('alamat');
+		$nomor_telpon = $this->input->post('nomor_telpon');
+		$email = $this->input->post('email');
 
 		$data = array(
 			'nama_pasien' => $nama,
 			'jenis_kelamin' => $jk,
-			'umur' => $umur
+			'umur' => $umur,
+			'alamat' => $alamat,
+			'nomor_telpon' => $nomor_telpon,
+			'email' => $email
 		);
 
 		$this->Pasien_model->insert_data($data);

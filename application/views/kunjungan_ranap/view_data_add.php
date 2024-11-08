@@ -4,10 +4,10 @@
             <div class="card-header bg-primary text-white">
                 <?= $title; ?>
 
-                <a href="<?= base_url('kunjungan'); ?>" class="btn btn-warning btn-sm float-right">Kembali</a>
+                <a href="<?= base_url('kunjungan_ranap'); ?>" class="btn btn-warning btn-sm float-right">Kembali</a>
             </div>
             <div class="card-body">
-                <form action="<?= base_url('kunjungan/insert'); ?>" method="post">
+                <form action="<?= base_url('kunjungan_ranap/insert'); ?>" method="post">
                     <div class="form-group">
                         <label for="">Tanggal Berobat</label>
                         <input type="date" name="tgl_berobat" id="tgl_berobat" class="form-control" required>

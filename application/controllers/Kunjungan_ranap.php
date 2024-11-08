@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Kunjungan extends CI_Controller {
+class Kunjungan_ranap extends CI_Controller {
 	
 	function __construct()
 	{
@@ -19,7 +19,7 @@ class Kunjungan extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Kunjungan_ranap/Berobat';
+		$data['title'] = 'Registrasi Rawat Inap';
 
 		$data['kunjungan_ranap'] = $this->Kunjungan_ranap_model->tampil_data()->result_array();
 
@@ -50,7 +50,7 @@ class Kunjungan extends CI_Controller {
 			'id_dokter' => $dokter
 		);
 
-		$this->Kunjungan_model->insert_data($data);
+		$this->Kunjungan_ranap_model->insert_data($data);
 
 		redirect('kunjungan_ranap');
 	}
@@ -62,7 +62,7 @@ class Kunjungan extends CI_Controller {
 		$data['dokter'] = $this->Dokter_model->tampil_data()->result_array();
 
 		$where = array('id_berobat' => $id);
-		$data['edit'] = $this->Kunjungan_model->edit_data($where)->row_array();
+		$data['edit'] = $this->Kunjungan_ranap_model->edit_data($where)->row_array();
 
 		$this->load->view('header', $data);
 		$this->load->view('kunjungan_ranap/view_data_edit', $data);
@@ -82,14 +82,14 @@ class Kunjungan extends CI_Controller {
 		);
 
 		$where = array('id_berobat' => $id);
-		$this->Kunjungan_model->update_data($data, $where);
+		$this->Kunjungan_ranap_model->update_data($data, $where);
 
 		redirect('kunjungan_ranap');
 	}
 
 	function hapus($id){
 		$where = array('id_berobat' => $id);
-		$this->Kunjungan_model->hapus_data($where);
+		$this->Kunjungan_ranap_model->hapus_data($where);
 
 		redirect('kunjungan_ranap');
 	}
@@ -100,18 +100,18 @@ class Kunjungan extends CI_Controller {
 		$data['title'] = "Rekam Medis";
 
 		// Show detail rekam medis
-		$data['d'] = $this->Kunjungan_model->tampil_rekam($id)->row_array();
+		$data['d'] = $this->Kunjungan_ranap_model->tampil_rekam($id)->row_array();
 
 		// Show Riwayat kunjungan
-		$q = $this->db->query("SELECT id_pasien FROM berobat WHERE id_berobat='$id'")->row_array();
+		$q = $this->db->query("SELECT id_pasien FROM berobat_ranap WHERE id_berobat='$id'")->row_array();
 		$id_pasien = $q['id_pasien'];
-		$data['riwayat'] = $this->Kunjungan_model->tampil_riwayat($id_pasien)->result_array();
+		$data['riwayat'] = $this->Kunjungan_ranap_model->tampil_riwayat($id_pasien)->result_array();
 
 		
 		// Show data obat
 		$data['obat'] = $this->Obat_model->tampil_data()->result_array();
 		// Show resep obat
-		$data['resep'] = $this->Kunjungan_model->tampil_resep($id)->result_array();
+		$data['resep'] = $this->Kunjungan_ranap_model->tampil_resep($id)->result_array();
 
 
 
@@ -122,19 +122,19 @@ class Kunjungan extends CI_Controller {
 
 	function insert_rekam(){
 		$id_berobat = $this->input->post('id');
-		$keluhan = $this->input->post('keluhan');
+		$keluhan = $this->input->post('subjective');
 		$diagnosa = $this->input->post('diagnosa');
 		$penatalaksanaan = $this->input->post('penatalaksanaan');
 
 		$data = array(
-			'keluhan_pasien' => $keluhan,
+			'subjective' => $keluhan,
 			'hasil_diagnosa' => $diagnosa,
 			'penatalaksanaan' => $penatalaksanaan
 		);
 
 		$where = array('id_berobat'=>$id_berobat);
 
-		$this->Kunjungan_model->update_data($data, $where);
+		$this->Kunjungan_ranap_model->update_data($data, $where);
 
 		redirect('kunjungan_ranap/rekam/'.$id_berobat);
 
@@ -149,17 +149,17 @@ class Kunjungan extends CI_Controller {
 			'id_obat' => $obat
 		);
 
-		$this->Kunjungan_model->insert_resep($data);
+		$this->Kunjungan_ranap_model->insert_resep($data);
 
-		redirect('kunjungan/rekam/'.$id_berobat);
+		redirect('kunjungan_ranap/rekam/'.$id_berobat);
 
 	}
 
 	function hapus_resep($id, $id_berobat){
 		$where = array('id_resep'=>$id);
-		$this->Kunjungan_model->hapus_resep($where);
+		$this->Kunjungan_ranap_model->hapus_resep($where);
 
-		redirect('kunjungan/rekam/'.$id_berobat);
+		redirect('kunjungan_ranap/rekam/'.$id_berobat);
 	}
 
 }

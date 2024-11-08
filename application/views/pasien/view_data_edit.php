@@ -22,6 +22,18 @@
                         <input type="number" name="umur" id="umur" value="<?= $r['umur']; ?>" class="form-control">
                     </div>
                     <div class="form-group">
+                        <label for="">Alamat</label>
+                        <input type="text" name="alamat" id="alamat" value="<?= $r['alamat']; ?>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Nomor Telpon</label>
+                        <input type="text" name="nomor_telpon" id="nomor_telpon" value="<?= $r['nomor_telpon']; ?>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="">Email</label>
+                        <input type="text" name="email" id="email" value="<?= $r['email']; ?>" class="form-control">
+                    </div>
+                    <div class="form-group">
                         <button type="submit" class="btn btn-primary btn-sm">Update Data</button>
                     </div>
             

@@ -19,7 +19,7 @@ class Kunjungan extends CI_Controller {
 
 	public function index()
 	{
-		$data['title'] = 'Kunjungan/Berobat';
+		$data['title'] = 'Registrasi Rawat Jalan';
 
 		$data['kunjungan'] = $this->Kunjungan_model->tampil_data()->result_array();
 

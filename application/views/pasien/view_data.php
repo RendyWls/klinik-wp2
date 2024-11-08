@@ -15,6 +15,8 @@
                                 <th>Nama Pasien</th>
                                 <th>L/P</th>
                                 <th>Umur</th>
+                                <th>Nomor Telpon</th>
+                                <th>Email</th>
                                 <th>Aksi</th>
                             </tr>
                         </thead>
@@ -25,6 +27,8 @@
                                     <td><?= $r['nama_pasien'] ?></td>
                                     <td><?= $r['jenis_kelamin'] ?></td>
                                     <td><?= $r['umur'] ?></td>
+                                    <td><?= $r['nomor_telpon'] ?></td>
+                                    <td><?= $r['email'] ?></td>
                                     <td>
                                         <a href="<?= base_url().'pasien/edit/'.$r['id_pasien']; ?>" class="btn btn-warning btn-sm">Edit</a>
                                         <a href="<?= base_url().'pasien/hapus/'.$r['id_pasien']; ?>" class="btn btn-danger btn-sm" onClick="return confirm('Yakin akan menghapus data?')">Hapus</a>
