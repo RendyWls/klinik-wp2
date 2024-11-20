@@ -46,9 +46,10 @@
                                 <tr>
                                     <th>No.</th>
                                     <th>Tanggal Berobat</th>
-                                    <th>Keluhan</th>
-                                    <th>Diagnosa</th>
-                                    <th>Penatalaksanaan</th>
+                                    <th>Subjective</th>
+                                    <th>Objective</th>
+                                    <th>Asesment</th>
+                                    <th>Plant</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -56,9 +57,10 @@
                                 <tr>
                                     <td><?= $no; ?></td>
                                     <td><?= $r['tgl_berobat'] ?></td>
-                                    <td><?= $r['keluhan_pasien'] ?></td>
-                                    <td><?= $r['hasil_diagnosa'] ?></td>
-                                    <td><?= $r['penatalaksanaan'] ?></td>
+                                    <td><?= $r['subjective'] ?></td>
+                                    <td><?= $r['objective'] ?></td>
+                                    <td><?= $r['asesment'] ?></td>
+                                    <td><?= $r['plan'] ?></td>
                                 </tr>
                             <?php $no++; }?>
                             </tbody>
@@ -76,15 +78,24 @@
                         <form action="<?= base_url(); ?>kunjungan/insert_rekam" method="post">
                         <input type="hidden" name="id" value="<?= $d['id_berobat']; ?>">
                             <div class="form-group">
-                                <label for="">Keluhan</label>
-                                <textarea name="keluhan" class="form-control" required><?= $d['keluhan_pasien']; ?></textarea>
+                                <label for="">Subjective</label>
+                                <textarea name="subjective" class="form-control" required><?= $d['subjective']; ?></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="">Diagnosa</label>
-                                <textarea name="diagnosa" class="form-control" required><?= $d['hasil_diagnosa']; ?></textarea>
+                                <label for="">Objective</label>
+                                <textarea name="objective" class="form-control" required><?= $d['objective']; ?></textarea>
                             </div>
                             <div class="form-group">
-                                <label for="">Penatalaksanaan</label>
+                                <label for="">Asesment</label>
+                                <textarea name="asesment" class="form-control" required><?= $d['asesment']; ?></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="">Plan</label>
+                                <textarea name="plan" class="form-control" required><?= $d['plan']; ?></textarea>
+                            </div>
+                            <!-- <div class="form-group">
+                                <label for="">Plan</label>
                                 <select name="penatalaksanaan" id="" class="form-control" required>
                                     <option value="<?= $d['penatalaksanaan']; ?>" selected><?= $d['penatalaksanaan']; ?></option>
                                     <option value="Rawat Jalan">Rawat Jalan</option>
@@ -92,7 +103,7 @@
                                     <option value="Rujuk">Rujuk</option>
                                     <option value="Lainnya">Lainnya</option>
                                 </select>
-                            </div>
+                            </div> -->
                             <button type="submit" class="btn btn-danger btn-sm">Simpan Data</button>
                         </form>
                     </div>

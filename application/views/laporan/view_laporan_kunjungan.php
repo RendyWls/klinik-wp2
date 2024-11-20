@@ -20,8 +20,7 @@
 
 <body>
     <div class="container">
-        <h3 class="mb-0">Klinik Kelompok 1</h3>
-        <small>Jl. Margonda Raya No.8, Pondok Cina, Kecamatan Beji, Kota Depok, Jawa Barat 16424</small>
+        <h3 class="mb-0">Rumah Sakit Kelompok 1</h3>
         <hr>
         <h4 class="text-center">LAPORAN DATA KUNJUNGAN</h4>
 
@@ -32,9 +31,10 @@
                 <th>Nama Pasien</th>
                 <th>L/P</th>
                 <th>Umur</th>
-                <th>Keluhan</th>
-                <th>Diagnosa</th>
-                <th>Penatalaksanaan</th>
+                <th>Subjective</th>
+                <th>Objective</th>
+                <th>Asesment</th>
+                <th>Plan</th>
 
             </tr>
             <?php $no = 1;
@@ -45,9 +45,10 @@
                     <td><?= $r['nama_pasien']; ?></td>
                     <td><?= $r['jenis_kelamin']; ?></td>
                     <td><?= $r['umur']; ?></td>
-                    <td><?= $r['keluhan_pasien']; ?></td>
-                    <td><?= $r['hasil_diagnosa']; ?></td>
-                    <td><?= $r['penatalaksanaan']; ?></td>
+                    <td><?= $r['subjective']; ?></td>
+                    <td><?= $r['objective']; ?></td>
+                    <td><?= $r['asesment']; ?></td>
+                    <td><?= $r['plan']; ?></td>
 
                 </tr>
             <?php $no++;

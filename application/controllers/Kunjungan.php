@@ -122,14 +122,16 @@ class Kunjungan extends CI_Controller {
 
 	function insert_rekam(){
 		$id_berobat = $this->input->post('id');
-		$keluhan = $this->input->post('keluhan');
-		$diagnosa = $this->input->post('diagnosa');
-		$penatalaksanaan = $this->input->post('penatalaksanaan');
+		$subjective = $this->input->post('subjective');
+		$objective = $this->input->post('objective');
+		$asesment = $this->input->post('asesment');
+		$plan = $this->input->post('plan');
 
 		$data = array(
-			'keluhan_pasien' => $keluhan,
-			'hasil_diagnosa' => $diagnosa,
-			'penatalaksanaan' => $penatalaksanaan
+			'subjective' => $subjective,
+			'objective' => $objective,
+			'asesment' => $asesment,
+			'plan' => $plan
 		);
 
 		$where = array('id_berobat'=>$id_berobat);

@@ -29,7 +29,7 @@
                                     <td><?= $r['umur'] ?></td>
                                     <td><?= $r['nama_dokter'] ?></td>
                                     <td>
-                                    <?php if ($r['hasil_diagnosa'] != NULL || $r['hasil_diagnosa'] != '') { ?>
+                                    <?php if ($r['asesment'] != NULL || $r['asesment'] != '') { ?>
                                         <a href="<?= base_url(); ?>kunjungan/rekam/<?= $r['id_berobat']; ?>" class="btn btn-success btn-sm">Rekam Medis</a>
                                     <?php } else { ?>
                                         <a href="<?= base_url(); ?>kunjungan/rekam/<?= $r['id_berobat']; ?>" class="btn btn-danger btn-sm">Rekam Medis</a>
