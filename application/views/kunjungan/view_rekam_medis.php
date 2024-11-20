@@ -23,6 +23,16 @@
                                 <td>:</td>
                                 <td><?= $d['umur']; ?></td>
                             </tr>
+                            <tr>
+                                <th>Alamat</th>
+                                <td>:</td>
+                                <td><?= $d['alamat']; ?></td>
+                            </tr>
+                            <tr>
+                                <th>Nomor Telpon</th>
+                                <td>:</td>
+                                <td><?= $d['nomor_telpon']; ?></td>
+                            </tr>
                         </table>
                     </div>
                 </div>

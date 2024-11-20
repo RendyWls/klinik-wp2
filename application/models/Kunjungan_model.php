@@ -7,7 +7,12 @@ class Kunjungan_model extends CI_Model{
         $query = $this->db->query("SELECT berobat.*,
                             pasien.nama_pasien,
                             pasien.umur,
-                            pasien.jenis_kelamin,
+                            case when pasien.jenis_kelamin = 'L' then 'Laki-Laki'
+                            when pasien.jenis_kelamin = 'P' then 'Perempuan'
+                            else '' end as jenis_kelamin,
+                            pasien.alamat,
+                            pasien.nomor_telpon,
+                            pasien.email,
                             dokter.nama_dokter 
                             FROM berobat
                             INNER JOIN pasien ON berobat.id_pasien=pasien.id_pasien 
@@ -43,7 +48,12 @@ class Kunjungan_model extends CI_Model{
         $query = $this->db->query("SELECT berobat.*,
         pasien.nama_pasien,
         pasien.umur,
-        pasien.jenis_kelamin,
+        case when pasien.jenis_kelamin = 'L' then 'Laki-Laki'
+                            when pasien.jenis_kelamin = 'P' then 'Perempuan'
+                            else '' end as jenis_kelamin,
+        pasien.alamat,
+        pasien.nomor_telpon,
+        pasien.email,
         dokter.nama_dokter 
         FROM berobat
         INNER JOIN pasien ON berobat.id_pasien=pasien.id_pasien 
@@ -57,6 +67,9 @@ class Kunjungan_model extends CI_Model{
         $query = $this->db->query("SELECT berobat.*,
         pasien.nama_pasien,
         pasien.umur,
+        pasien.alamat,
+        pasien.nomor_telpon,
+        pasien.email,
         pasien.jenis_kelamin,
         dokter.nama_dokter 
         FROM berobat
